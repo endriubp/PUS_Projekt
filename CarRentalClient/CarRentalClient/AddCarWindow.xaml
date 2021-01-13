@@ -1,0 +1,51 @@
+﻿<Window x:Class="CarRentalClient.AddCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarRentalClient"
+        mc:Ignorable="d"
+        Title="Baza samochodów" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="5">
+            <Label x:Name="carbrandlb" Content="Marka pojazdu" ></Label>
+            <TextBox Name="carbrandtb"  />
+            <Label Name="carmodellb" Content="Model pojazdu"></Label>
+            <TextBox Name="carmodeltb" ></TextBox>
+            <Label Name="productionyearlb" Content="Rok produkcji pojazdu" ></Label>
+            <TextBox Name="productionyeartb"></TextBox>
+            <Label Name="enginepowerlb" Content="Moc silnika pojazdu [KM]"></Label>
+            <TextBox Name="enginepowertb"></TextBox>
+            <Label Name="fueltypelb" Content="Typ paliwa pojazdu"></Label>
+            <ComboBox Name="cBox">
+            </ComboBox>
+
+            <Button Name="AddCarbtn" Content="Dodaj" Click="AddCarbtn_Click"></Button>
+            <Label Name="Idlb" Content="Id" ></Label>
+            <TextBox Name="Idtb"></TextBox>
+            <Button Name="UpdateCarbtn" Content="Zmień" Click="UpdateCarbtn_Click" >
+                
+            </Button>
+            
+            <Button Name="DeleteCarbtn" Content="Usuń" Click="DeleteCarbtn_Click" />
+            <Button Name="Backbtn" Content="Powrót" Click="Backbtn_Click"></Button>
+        </StackPanel>
+
+
+        <DataGrid Name="DataGrid" Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"></DataGrid>
+
+    </Grid>
+</Window>

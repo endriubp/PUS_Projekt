@@ -1,0 +1,35 @@
+﻿<Window x:Class="CarRentalClient.RentCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarRentalClient"
+        mc:Ignorable="d"
+        Title="Wypożycz samochód" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Name="Namelb" Content="Imię"></Label>
+            <TextBox Name="Nametb"></TextBox>
+            <Label Name="SureNamelb" Content="Nazwisko"></Label>
+            <TextBox Name="SureNametb"></TextBox>
+            <Label Name="Datelb" Content="Data urodzenia"></Label>
+            <DatePicker Name="dp"></DatePicker>
+            <Label Name="CarIDlb" Content="ID pojazdu"></Label>
+            <TextBox Name="CarIDtb"></TextBox>
+            <Button Name="Rent" Content="Wypożycz samochód" Click="Rent_Click"></Button>
+            <Label Name="idlb" Content="ID"></Label>
+            <TextBox Name="idtb"></TextBox>
+            <Button Name="EndRent" Content="Zakończ wypożyczenie samochodu" Click="EndRent_Click"></Button>
+            <Button Name="CarList" Content="Lista Pojazdów" Click="CarList_Click"></Button>
+            <Button Name="Back" Content="Powrót" Click="Back_Click"></Button>
+        </StackPanel>
+        <DataGrid Name="DataGrid" Grid.Column="1"></DataGrid>
+    </Grid>
+</Window>
